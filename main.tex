@@ -16,7 +16,7 @@
 
 \begin{abstract}
 \noindent
-\textbf{Course:} SOEN~331 \\
+\textbf{Course:} SOEN 331 \\
 \textbf{Instructor:} Dr.\,Constantinos Constantinides \\
 \textbf{Due Date:} Tuesday, 4 March 2025 (23:59) \\
 \textbf{Weight:} 10\% of the overall grade
@@ -29,107 +29,121 @@
 
 \section*{Introduction and ground rules}
 % Summarize or restate any ground rules from the assignment.
-% For instance: 
-% 1) This is an individual assessment. 
-% 2) Must be prepared in LaTeX. 
-% 3) Follow submission instructions strictly.
+% For instance:
+% (1) Individual assessment.
+% (2) Must be prepared in LaTeX.
+% (3) Follow submission instructions strictly.
 
 \newpage
 \section{Problem 1: Propositional Logic (7 pts)}
 
-\subsection*{1.1 Statement by Sophia the robot (3 pts)}
-% Placeholder for your analysis and formal logic representation.
+\subsection*{1.1 Statement by Sophia the robot \,(3 pts)}
+% "If you (humans) are nice to me, then I will be nice to you." 
+% Formal logic representation and analysis (is it a threat?).
 
-\subsection*{1.2 Argument from “Computing Machinery and Intelligence” (4 pts)}
-% Placeholder for your analysis of validity.
+\subsection*{1.2 Argument from “Computing Machinery and Intelligence” \,(4 pts)}
+% Argument: "If each man had a definite set of rules..."
 
 \newpage
 \section{Problem 2: Predicate Logic (8 pts)}
 
-\subsection*{2.1 Interpreting given formalizations (4 pts)}
-% (a) ...
-% (b) ...
+\subsection*{2.1 Interpreting given formalizations \,(4 pts)}
+\begin{itemize}
+    \item (a) \(\forall x : \mathbb{R} : \text{number}(x) \to \neg \text{rational}(x)\)
+    \item (b) \(\exists x : \mathbb{R} : \text{number}(x) \wedge \text{rational}(x)\)
+\end{itemize}
 
-\subsection*{2.2 Formalizing statements (4 pts)}
-% (a) ...
-% (b) ...
+\subsection*{2.2 Formalizing statements \,(4 pts)}
+\begin{itemize}
+    \item (a) “There are no irrational real numbers.”
+    \item (b) “Some real numbers are irrational.”
+\end{itemize}
 
 \newpage
 \section{Problem 3: Linear Temporal Logic 1 (15 pts)}
 
-\subsection*{3.1 Requirement “if exactly one of ϕ, ψ becomes invariant…” (3 pts)}
+\subsection*{3.1 (3 pts)}
 % ...
 
-\subsection*{3.2 Requirement “if ϕ and ψ differ at time = i…” (3 pts)}
+\subsection*{3.2 (3 pts)}
 % ...
 
-\subsection*{3.3 Describing and visualizing ¬(¬ϕ ∨ ¬ψ) → ◇²τ ∧ ○² ◇ π (3 pts)}
+\subsection*{3.3 (3 pts)}
 % ...
 
-\subsection*{3.4 Describing and visualizing ○² ◇²τ ∧ (χ ∧ ○ψ) → ○²² ◇ (β R α) (3 pts)}
+\subsection*{3.4 (3 pts)}
 % ...
 
-\subsection*{3.5 Describing and visualizing ○²(α ⊕ β) → ○◇ (τ U κ) (3 pts)}
+\subsection*{3.5 (3 pts)}
 % ...
 
 \newpage
 \section{Problem 4: Linear Temporal Logic 2 (15 pts)}
 
-\subsection*{4.1 Visualizing all models of behavior (9 pts)}
+\subsection*{4.1 Visualizing all models of behavior \,(9 pts)}
+% The big formula:
+%  \( \Box \bigl[\dots\bigr] \)
+
+\subsection*{4.2 Mathematical structures \,(4 pts)}
 % ...
 
-\subsection*{4.2 Mathematical structures (4 pts)}
-% ...
-
-\subsection*{4.3 Observations on termination, non-termination, consistency (2 pts)}
+\subsection*{4.3 Observations on termination, non-termination, consistency \,(2 pts)}
 % ...
 
 \newpage
 \section{Problem 5: Unordered Structures (10 pts)}
-% 10 sub-questions. Summarize each question carefully.
+
+% 10 sub-questions on sets and membership
+% e.g. Is \(\{Kirk\} \in P(\text{Names})\), etc.
 
 \newpage
 \section{Problem 6: Ordered Structures (10 pts)}
 
-\subsection*{6.1 Implementing a Queue using two lists (4 pts)}
-% ...
+\subsection*{6.1 Implementing a Queue using two lists \,(4 pts)}
+% Using elements \(\langle 1, 2, 3 \rangle\)
 
-\subsection*{6.2 Defining Enqueue and Dequeue operations (6 pts)}
+\subsection*{6.2 Defining \(\text{Enqueue}\) and \(\text{Dequeue}\) \,(6 pts)}
 % ...
 
 \newpage
 \section{Problem 7: Binary Relations, Functions, and Orderings (15 pts)}
 
-\subsection*{7.1 Poset proofs and Hasse diagrams (3 pts total)}
-% (2 pts) poset on {2,3,4,6,24,36,72} 
-% (1 pt) poset on P\{1,2,3}
+\subsection*{7.1 Poset proofs and Hasse diagrams}
+\begin{itemize}
+    \item (a) \(\bigl(\{2,3,4,6,24,36,72\}, /\bigr)\) is a poset \,(2 pts) \\
+          Hasse diagram, maximal/minimal elements
+    \item (b) \(\bigl(\mathcal{P}\{1,2,3\}, \subseteq\bigr)\) is a poset \,(1 pt) \\
+          Hasse diagram, maximal/minimal elements
+\end{itemize}
 
-\subsection*{7.2 Analyzing variable map (12 pts total)}
-% (a) Domain, codomain, total vs partial
-% (b) Properties: injective, surjective, etc.
+\subsection*{7.2 Analyzing variable \(\texttt{map}\) \,(12 pts)}
+% Domain/codomain, partial/total, injectivity, surjectivity, etc.
 
 \newpage
 \section{Problem 8: Binary Relations, Functions, and Orderings 2 (10 pts)}
 
-% Similar format as Problem 7 but focusing on map2
-\subsection*{8.1 Is map2 a function, domain, codomain (2 pts)}
+\subsection*{8.1 Is \(\texttt{map2}\) a function, domain/codomain \,(2 pts)}
 % ...
 
-\subsection*{8.2 Properties analysis (8 pts)}
-% ...
+\subsection*{8.2 Properties \,(8 pts)}
+% injective, surjective, order preserving, isomorphism, etc.
 
 \newpage
 \section{Problem 9: Construction Techniques (10 pts)}
 
-\subsection*{9.1 Function \texttt{map}(f, \(\Lambda\)) (5 pts)}
-% (a) Transform into computable function
-% (b) Define recursively
-% (c) Unfold example
+\subsection*{9.1 Function \(\texttt{map}(f,\Lambda)\) \,(5 pts)}
+\begin{itemize}
+    \item (a) Transform into computable function
+    \item (b) Define function recursively
+    \item (c) Unfold your definition for \(\texttt{map}(f,\langle a,b,c\rangle)\)
+\end{itemize}
 
-\subsection*{9.2 Function \texttt{insert}(x,\(\Lambda\)) (5 pts)}
-% (a) Transform into computable function
-% (b) Define recursively
-% (c) Unfold example
+\subsection*{9.2 Function \(\texttt{insert}(x,\Lambda)\) \,(5 pts)}
+\begin{itemize}
+    \item (a) Transform into computable function
+    \item (b) Define function recursively
+    \item (c) Unfold example: \(\texttt{insert}(5,\langle 1,3,5,7\rangle)\)
+\end{itemize}
 
 \newpage
 \section*{What to submit}
@@ -138,4 +152,4 @@
 % 2) A folder /images with all figures
 % 3) Zip and submit on EAS
 
-\end{document}s
+\end{document}
