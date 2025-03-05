@@ -4,6 +4,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx}               
 \usepackage{hyperref} 
+\usepackage{amsmath}
 
 
 \title{Assignment 1 \\\vspace{1in}}
@@ -19,7 +20,7 @@
 \maketitle
 
 \newpage
-\section{Problem 1: Propositional Logic (7 pts)}
+\section*{Problem 1: Propositional Logic (7 pts)}
 
 \subsection*{1.1 (3 pts)}
 \textit{$P$: Humans are nice to Sofia\\
@@ -61,7 +62,7 @@ This argument follows once again falls in the inverse error category, which is a
 
 
 \newpage
-\section{Problem 2: Predicate logic (8 pts)}
+\section*{Problem 2: Predicate logic (8 pts)}
 
 \subsection*{2.1 \,(4 pts)}
 \begin{enumerate}
@@ -83,39 +84,56 @@ This argument follows once again falls in the inverse error category, which is a
 \end{enumerate}
 \newpage
 
-\section{Problem 3: Linear Temporal Logic 1 (15 pts)}
+\section*{Problem 3: Linear Temporal Logic 1 (15 pts)}
 
 \subsection*{3.1 (3 pts)}
 
-\begin{equation}
+\begin{equation*}
     \bigcirc \Box (\phi \oplus \psi) \rightarrow \bigcirc^2 \Diamond (\chi W \tau)
-\end{equation}
+\end{equation*}
 
 \subsection*{3.2 (3 pts)}
 
 
-\begin{equation}
+\begin{equation*}
     (\phi \oplus \psi) \rightarrow \bigcirc \Box (\chi \rightarrow (\kappa R \omega))
-\end{equation}
+\end{equation*}
 
 \subsection*{3.3 (3 pts)}
-\begin{equation}
+\begin{equation*}
     \neg (\neg \varphi \vee \neg \psi) \rightarrow \Diamond \Box \tau \land \bigcirc^2 \Diamond \pi
-\end{equation}
+\end{equation*}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/3.3}
+\end{figure}
+
 If $\varphi$ and $\psi$ are true, then $\tau$ will eventually become invariant and starting from time $i+2$, $\pi$ will eventually happen.
 
 \subsection*{3.4 (3 pts)}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/3.4}
+\end{figure}
 If starting at time $i+2$, $\tau$ eventually becomes invariant and at time $i$, x becomes true and $/psi$ becomes true at time $i+1$, then starting at time $i+2$, $\tau$ will be true at all states until and including when $\beta$ becomes true, infinitely often. 
 
+
 \subsection*{3.5 (3 pts)}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/3.5.png}
+\end{figure}
 If at time $i+1$, either one but not both of $\alpha$ and $\beta$ are true, then starting at time $i+1$, $\tau$ will eventually be true and remain until $\kappa$ becomes true. ($\kappa$ will become true)
 
 \newpage
-\section{Problem 4: Linear Temporal Logic 2 (15 pts)}
+\section*{Problem 4: Linear Temporal Logic 2 (15 pts)}
 
 \subsection*{4.1 Visualizing all models of behavior \,(9 pts)}
-% The big formula:
-%  \( \Box \bigl[\dots\bigr] \)
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/4.1}
+\end{figure}
 
 \subsection*{4.2 \,(4 pts)}
 \begin{align*}
@@ -129,7 +147,7 @@ Model 1: The first model fully terminates. Additionally, it is consistent.
 Model 2: The second model fully terminates. Additionally, it is consistent.
 Model 3: The third model fully terminates. Additionally, it is consistent.
 \newpage
-\section{Problem 5: Unordered Structures (10 pts)}
+\section*{Problem 5: Unordered Structures (10 pts)}
 \begin{enumerate}
     \item \textit{Crew = $\mathbb{P}$ Names}
     \item \textit{Spock} would not be a legitimate value, as all values of \textit{Crew} must be a set of names. \textit{Spock} is not (it does not have curly braces).
@@ -140,56 +158,126 @@ Model 3: The third model fully terminates. Additionally, it is consistent.
     \item No, the elements of the product are actually ordered pairs.
     \item Yes, because ever Powerset has an empty set.
     \item The variable \textit{Commander} can assume any value supported by the Powerset of \textit{Crew}. For example, can be the empty set \{\}, one element of the said or the entire set.
-    \item NEED TO CHANGE FOR CREW X CREWThey must be ordered pairs. Therefore, in this case it is false.
+    \item They must be ordered pairs. Therefore, in this case it is false.
 \end{enumerate}
 \newpage
-\section{Problem 6: Ordered Structures (10 pts)}
+\section*{Problem 6: Ordered Structures (10 pts)}
 
 \subsection*{6.1\,(4 pts)}
 
 To implement a Queue Abstract Data Type with element  $\langle 1,2,3 \rangle$, I would utilize the Stack data type. However, these two different data types operate differently. Queues work with the priniciple of first-in and first-out. Stacks work by adding removing elements from the same end. Therefore, using two lists of stacks will help us modify this difference by utilizing the push and pop operations. In addition, this proposed model will allow us to have elements of generic type T.
 
 \subsection*{6.2\,(6 pts)}
-
-
-\newpage
-\section{Problem 7: Binary Relations, Functions, and Orderings (15 pts)}
-
-\subsection*{7.1 Poset proofs and Hasse diagrams}
+You define two lists L1 and L2 which are both stacks and have the proprieties of a stack\\
+\textbf{Enqueue: Add an element to the back of a line}
 \begin{itemize}
-    \item (a) \(\bigl(\{2,3,4,6,24,36,72\}, /\bigr)\) is a poset \,(2 pts) \\
-          Hasse diagram, maximal/minimal elements
-    \item (b) \(\bigl(\mathcal{P}\{1,2,3\}, \subseteq\bigr)\) is a poset \,(1 pt) \\
-          Hasse diagram, maximal/minimal elements
+    \item To add an element to the queue, simply push it onto L1:
+    \begin{equation*}
+        L1.push(el)
+    \end{equation*}
+\end{itemize}
+\textbf{Dequeue: Remove first element of a line}
+\begin{itemize}
+    \item To remove an element, we need to reverse the order:
+    \begin{enumerate}
+        \item Move all elements from L1 to L2 using:
+        \begin{equation*}
+            L2.push(L1.pop()) \quad \text{(repeat until L1 is empty)}
+        \end{equation*}
+        \item Remove the top element from L2:
+        \begin{equation*}
+            L2.pop()
+        \end{equation*}
+        \item Move all elements back from L2 to L1:
+        \begin{equation*}
+            L1.push(L2.pop()) \quad \text{(repeat until L2 is empty)}
+        \end{equation*}
+    \end{enumerate}
 \end{itemize}
 
-\subsection*{7.2 Analyzing variable \(\texttt{map}\) \,(12 pts)}
-% Domain/codomain, partial/total, injectivity, surjectivity, etc.
+This ensures that elements are dequeued in the correct order while still using stack operations.
+
 
 \newpage
-\section{Problem 8: Binary Relations, Functions, and Orderings 2 (10 pts)}
+\section*{Problem 7: Binary Relations, Functions, and Orderings (15 pts)}
 
-\subsection*{8.1\,(2 pts)}
-% ...
+\subsection*{7.1}
+*LACK OF TIME
 
-\subsection*{8.2\,(8 pts)}
-% injective, surjective, order preserving, isomorphism, etc.
 
-\newpage
-\section{Problem 9: Construction Techniques (10 pts)}
+\subsection*{7.2\,(1 pts)}
+*LACK OF TIME
 
-\subsection*{9.1 Function \(\texttt{map}(f,\Lambda)\) \,(5 pts)}
+\subsection*{7.3\,(12 pts)}
 \begin{itemize}
-    \item (a) Transform into computable function
-    \item (b) Define function recursively
-    \item (c) Unfold your definition for \(\texttt{map}(f,\langle a,b,c\rangle)\)
+    \item a) The variable \(map\) is a function. It is a partial function because not the element 2 does not have a corresping element in the codomain. The domain is \(\{2, 4, 6, 24, 36, 72\}\), and the codomain is the power set of \(\{1, 2, 3\}\).
+    \item b) \begin{itemize}
+       \item \textbf{Injective:} No, because multiple domain elements map to the same set (36 and 6 \(\{3\}\)).
+       \item \textbf{Surjective (Onto):} No, because not every subset of \(\{1, 2, 3\}\) is mapped.
+       \item \textbf{Bijective:} No, because it is not injective or surjective.
+       \item \textbf{Order Preserving:} No, because the order of elements in the domain is not preserved in the codomain.
+       \item \textbf{Order Reflecting:} No because order is not preserved as previously stated.
+       \item \textbf{Order Embedding:} No, as it does not preserve or reflect order.
+       \item \textbf{Isomorphism:} No, because it is not bijective and does not preserve structure.
+\end{itemize}
 \end{itemize}
 
-\subsection*{9.2 Function \(\texttt{insert}(x,\Lambda)\) \,(5 pts)}
+
+\newpage
+\section*{Problem 8 Binary Relations, Functions and Orderings 2 (10
+pts)}
+(a) The variable \(map2\) is a function. It is a total function because every element in the domain has a corresponding element in the codomain. The domain is \(\{\{1,2,3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1\}, \{2\}, \{3\}\}\), and the codomain is \(\{2, 3, 4, 6, 24, 36, 72\}\).
+
+(b) 
 \begin{itemize}
-    \item (a) Transform into computable function
-    \item (b) Define function recursively
-    \item (c) Unfold example: \(\texttt{insert}(5,\langle 1,3,5,7\rangle)\)
+       \item \textbf{Injective (One-to-One):} No, because different subsets map to the same value.
+       \item \textbf{Surjective (Onto):} Yes, because every element in the codomain is mapped to by some subset in the domain.
+       \item \textbf{Bijective:} No, because it is not injective
+       \item \textbf{Order Preserving:} No, because the order of subsets in the domain is not preserved in the codomain.
+       \item \textbf{Order Reflecting:} No, for similar reasons as order preserving.
+       \item \textbf{Order Embedding:} No, as it does not preserve or reflect order.
+       \item \textbf{Isomorphism:} No, because it is not bijective.
+\end{itemize}
+
+
+\newpage
+\section*{Problem 9: Construction Techniques (10 pts)}
+
+\subsection*{9.1\,(5 pts)}
+\begin{itemize}
+    \item a) 
+    \begin{equation*}
+    \text{cons}(f(a), \text{map}(f, \langle b, c \rangle))
+    \end{equation*}
+    \item b)
+    \begin{equation*}
+    \text{map}(f, \Lambda) = \langle \rangle
+    \end{equation*}
+    \begin{equation*}
+    \text{map}(f, \Lambda) = \text{cons}(f(\Lambda), \text{map}(f, \text(\Lambda))
+    \end{equation*}
+    \item c)
+    \begin{align*}
+    &= \text{cons}(f(a), \text{map}(f, \langle b, c \rangle)) \\
+    &= \text{cons}(f(a), \text{cons}(f(b), \text{cons}(f(c), \langle \rangle))) \\
+    &= \langle f(a), f(b), f(c) \rangle
+\end{align*}
+    
+\end{itemize}
+
+\subsection*{9.2\,(5 pts)}
+\begin{itemize}
+    \item a)
+    \begin{equation*}
+    \text{cons}(a, \text{insert}(c, \langle b, c, d \rangle))
+    \end{equation*}
+    \item b)
+    \begin{equation*}
+    \text{insert}(c, \Lambda) = \langle c \rangle, \quad \text{if } \Lambda \text{ is empty}
+    \text{  *LACK OF TIME/NOT SURE}
+    \end{equation*}
+
+    \item c) LACK OT TIME/NOT SURE
 \end{itemize}
 
 \newpage
